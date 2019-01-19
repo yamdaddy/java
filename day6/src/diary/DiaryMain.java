@@ -21,8 +21,8 @@ public class DiaryMain extends JFrame {
 
 	public DiaryMain() {
 		getContentPane().setBackground(Color.GREEN);
-		//ì»¨íŠ¸ë¡¤+ì‰¬í”„íŠ¸+f(ìë™ ì •ë¦¬)
-		setTitle("ë‚˜ì˜ ì¼ê¸°ì¥ ì‹œì‘í™”ë©´");
+		//ÄÁÆ®·Ñ+½¬ÇÁÆ®+f(ÀÚµ¿ Á¤¸®)
+		setTitle("³ªÀÇ ÀÏ±âÀå ½ÃÀÛÈ­¸é");
 		setSize(520, 700);
 		
 		FlowLayout flow = new FlowLayout();
@@ -31,28 +31,28 @@ public class DiaryMain extends JFrame {
 		JLabel lblNewLabel = new JLabel("");
 		getContentPane().add(lblNewLabel);
 		
-		ImageIcon icon = new ImageIcon("ì¼ê¸°ì¥-ë©”ì¸.png");
+		ImageIcon icon = new ImageIcon("ÀÏ±âÀå-¸ŞÀÎ.png");
 		lblNewLabel.setIcon(icon);
 		
-		JLabel label = new JLabel("ì•„ì´ë””: ");
-		label.setFont(new Font("íœ´ë¨¼ë‘¥ê·¼í—¤ë“œë¼ì¸", Font.BOLD, 20));
+		JLabel label = new JLabel("¾ÆÀÌµğ: ");
+		label.setFont(new Font("ÈŞ¸ÕµÕ±ÙÇìµå¶óÀÎ", Font.BOLD, 20));
 		getContentPane().add(label);
 		
 		id = new JTextField();
-		id.setFont(new Font("íœ´ë¨¼ë‘¥ê·¼í—¤ë“œë¼ì¸", Font.BOLD, 20));
+		id.setFont(new Font("ÈŞ¸ÕµÕ±ÙÇìµå¶óÀÎ", Font.BOLD, 20));
 		getContentPane().add(id);
 		id.setColumns(20);
 		
-		JLabel label_1 = new JLabel("íŒ¨ìŠ¤ì›Œë“œ: ");
-		label_1.setFont(new Font("íœ´ë¨¼ë‘¥ê·¼í—¤ë“œë¼ì¸", Font.BOLD, 20));
+		JLabel label_1 = new JLabel("ÆĞ½º¿öµå: ");
+		label_1.setFont(new Font("ÈŞ¸ÕµÕ±ÙÇìµå¶óÀÎ", Font.BOLD, 20));
 		getContentPane().add(label_1);
 		
 		pw = new JTextField();
-		pw.setFont(new Font("íœ´ë¨¼ë‘¥ê·¼í—¤ë“œë¼ì¸", Font.BOLD, 20));
+		pw.setFont(new Font("ÈŞ¸ÕµÕ±ÙÇìµå¶óÀÎ", Font.BOLD, 20));
 		getContentPane().add(pw);
 		pw.setColumns(20);
 		
-		JButton login = new JButton("ë¡œê·¸ì¸");
+		JButton login = new JButton("·Î±×ÀÎ");
 		login.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String sId = "root";
@@ -61,19 +61,20 @@ public class DiaryMain extends JFrame {
 				String gPw = pw.getText();
 				
 				if ((sId.equals(gId)) && (sPw.equals(gPw))) {
-					JOptionPane.showMessageDialog(null, "ë¡œê·¸ì¸ OKì…ë‹ˆë‹¤.");
+					JOptionPane.showMessageDialog(null, "·Î±×ÀÎ OKÀÔ´Ï´Ù.");
+					MyDiary my = new MyDiary();
 				} else {
-					JOptionPane.showMessageDialog(null, "ë¡œê·¸ì¸ NOTì…ë‹ˆë‹¤. ì¬ì…ë ¥í•´ì£¼ì„¸ìš”.");
+					JOptionPane.showMessageDialog(null, "·Î±×ÀÎ NOTÀÔ´Ï´Ù. ÀçÀÔ·ÂÇØÁÖ¼¼¿ä.");
 					
 					
 				}
 			}
 		});
 		login.setBackground(Color.MAGENTA);
-		login.setFont(new Font("íœ´ë¨¼ë‘¥ê·¼í—¤ë“œë¼ì¸", Font.BOLD, 40));
+		login.setFont(new Font("ÈŞ¸ÕµÕ±ÙÇìµå¶óÀÎ", Font.BOLD, 40));
 		getContentPane().add(login);
 		
-		JButton reset = new JButton("ì´ˆê¸°í™”");
+		JButton reset = new JButton("ÃÊ±âÈ­");
 		reset.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				id.setText("");
@@ -81,7 +82,7 @@ public class DiaryMain extends JFrame {
 			}
 		});
 		reset.setBackground(Color.ORANGE);
-		reset.setFont(new Font("íœ´ë¨¼ë‘¥ê·¼í—¤ë“œë¼ì¸", Font.BOLD, 40));
+		reset.setFont(new Font("ÈŞ¸ÕµÕ±ÙÇìµå¶óÀÎ", Font.BOLD, 40));
 		getContentPane().add(reset);
 		
 		setVisible(true);
